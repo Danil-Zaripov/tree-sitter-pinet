@@ -32,10 +32,10 @@
     "c": true,
     "go": false,
     "java": false,
-    "node": true,
-    "python": true,
-    "rust": true,
+    "node": false,
+    "python": false,
+    "rust": false,
     "swift": false,
-    "zig": true
+    "zig": false
   }
 }

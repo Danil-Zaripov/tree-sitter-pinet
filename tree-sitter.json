@@ -1,0 +1,41 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "pinet",
+      "camelcase": "Pinet",
+      "title": "pinet",
+      "scope": "source.pinet",
+      "file-types": ["in"],
+      "injection-regex": "^pinet$",
+      "class-name": "TreeSitterPinet",
+      "highlights": "queries/highlights.scm"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Interaction nets programming language",
+    "authors": [
+      {
+        "name": "Danil-Zaripov",
+        "email": "danilzaripov@yahoo.com",
+        "url": "https://github.com/Danil-Zaripov"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/Danil-Zaripov/pinet",
+      "funding": ""
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": false,
+    "java": false,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": false,
+    "zig": true
+  }
+}

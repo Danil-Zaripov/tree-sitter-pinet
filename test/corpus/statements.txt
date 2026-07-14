@@ -1,0 +1,24 @@
+==========
+active pairs
+==========
+
+A() ~ B(C(), d);
+
+---
+
+(source_file
+  (stmt
+    (aplist
+      (active_pair
+        (value
+          (agent
+            (ident)))
+        (value
+          (agent
+            (ident)
+            (arg_list
+              (value
+                (agent
+                  (ident)))
+              (value
+                (name)))))))))

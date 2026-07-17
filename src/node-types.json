@@ -196,15 +196,22 @@
   {
     "type": "rule",
     "named": true,
-    "fields": {},
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "aplist",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "aplist",
-          "named": true
-        },
         {
           "type": "object",
           "named": true
@@ -219,15 +226,22 @@
   {
     "type": "rule_expression",
     "named": true,
-    "fields": {},
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "aplist",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
-        {
-          "type": "aplist",
-          "named": true
-        },
         {
           "type": "expression",
           "named": true

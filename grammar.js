@@ -26,7 +26,12 @@ export default grammar({
     active_pair: ($) => seq($.object, "~", $.object),
     aplist: ($) => seq($.active_pair, repeat(seq(",", $.active_pair))),
     rule_expression: ($) =>
-      seq("|", choice($.otherwise, $.expression), "=>", optional($.aplist)),
+      seq(
+        "|",
+        choice($.otherwise, $.expression),
+        "=>",
+        field("body", optional($.aplist)),
+      ),
     expression: ($) =>
       choice($.binary_expression, $.unary_expression, $.object),
     unary_expression: ($) => prec(10, seq("!", $.expression)),
@@ -42,7 +47,10 @@ export default grammar({
         $.object,
         "><",
         $.object,
-        choice(repeat1($.rule_expression), seq("=>", $.aplist)),
+        choice(
+          repeat1($.rule_expression),
+          seq("=>", field("body", optional($.aplist))),
+        ),
       ),
     print_stmt: ($) => $.name,
     free_stmt: ($) => seq("free", optional($.name_list)),
